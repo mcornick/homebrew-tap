@@ -5,32 +5,32 @@
 class Genpw < Formula
   desc "Generates strings that can be used as reasonably secure passwords."
   homepage "https://github.com/markcornick/genpw"
-  version "3.0.0"
+  version "3.1.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/markcornick/genpw/releases/download/v3.0.0/genpw_3.0.0_Darwin_x86_64.tar.gz"
-      sha256 "96032c353f83c971da109fa65e8d8c148ee5ccaaaf9f4b09ecd6ed17591e3aac"
+      url "https://github.com/markcornick/genpw/releases/download/v3.1.0/genpw_3.1.0_Darwin_x86_64.tar.gz"
+      sha256 "521e515fa9c088bfbbb2829a6a3ac3c696badd4a01dd022cd53005a8714c7c94"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/markcornick/genpw/releases/download/v3.0.0/genpw_3.0.0_Darwin_arm64.tar.gz"
-      sha256 "ffd3e8e8cac58d12720231d428a7abbf08d2b6d124bbf74ed278f02667d1ff8b"
+      url "https://github.com/markcornick/genpw/releases/download/v3.1.0/genpw_3.1.0_Darwin_arm64.tar.gz"
+      sha256 "c65b4697738bd15425e48980a0a8804d3addb608814c91f73ee9ce4086b49832"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/markcornick/genpw/releases/download/v3.0.0/genpw_3.0.0_Linux_x86_64.tar.gz"
-      sha256 "850ca30ff157cf51e19c3da8cf648c7bf562e3cf9c21f84c0e8c2da55cf19a28"
+      url "https://github.com/markcornick/genpw/releases/download/v3.1.0/genpw_3.1.0_Linux_x86_64.tar.gz"
+      sha256 "6bf5803a93bf5e9d555b5d5da8a95459895ac436e7751e4769b3a945cd75f7d1"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/markcornick/genpw/releases/download/v3.0.0/genpw_3.0.0_Linux_armv6.tar.gz"
-      sha256 "57b85c9b3312a4b5b86150e37115013e0962cd3e393314e8bb80bed17b6ae5d5"
+      url "https://github.com/markcornick/genpw/releases/download/v3.1.0/genpw_3.1.0_Linux_armv6.tar.gz"
+      sha256 "b5c15952b4067c487b0a56f12e543b59d48b2a934bed0c3a34b0fe0c4f5c68bc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/markcornick/genpw/releases/download/v3.0.0/genpw_3.0.0_Linux_arm64.tar.gz"
-      sha256 "ce04551fbb8bd8164103d8d9d15afb7027b0f89566a2008e60f4de7798dfb9b9"
+      url "https://github.com/markcornick/genpw/releases/download/v3.1.0/genpw_3.1.0_Linux_arm64.tar.gz"
+      sha256 "529530341b4bab8b912446764e3489d8b047858e7c0a8f5ceeb0d79d22133625"
     end
   end
 
