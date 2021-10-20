@@ -6,7 +6,6 @@ class Genpw < Formula
   desc "Generates strings that can be used as reasonably secure passwords."
   homepage "https://github.com/markcornick/genpw"
   version "4.2.2"
-  bottle :unneeded
 
   on_macos do
     url "https://github.com/markcornick/genpw/releases/download/v4.2.2/genpw_4.2.2_darwin_all.tar.gz"
