@@ -5,11 +5,11 @@
 class LinenoiseCli < Formula
   desc "Generates strings that can be used as reasonably secure passwords."
   homepage "https://github.com/mcornick/linenoise-cli"
-  version "1.1.10"
+  version "1.2.0"
 
   on_macos do
-    url "https://github.com/mcornick/linenoise-cli/releases/download/v1.1.10/linenoise-cli_1.1.10_darwin_all.tar.gz"
-    sha256 "d80ef4e87d608020daa62acc4ec31ed9337ae396f5fbe4141420742c32957da0"
+    url "https://github.com/mcornick/linenoise-cli/releases/download/v1.2.0/linenoise-cli_1.2.0_darwin_all.tar.gz"
+    sha256 "1bb7d8fec7e5f2e8afd7eddf740e3e35edc733837afeef650e33590d1ecf7eac"
 
     def install
       bin.install "linenoise-cli"
@@ -17,25 +17,25 @@ class LinenoiseCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.1.10/linenoise-cli_1.1.10_linux_amd64.tar.gz"
-      sha256 "e51aad680c20354c15446a13c593540d3e81cdd5f564e3f2c19f5d18dc276674"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.2.0/linenoise-cli_1.2.0_linux_arm64.tar.gz"
+      sha256 "5fe4a2953146a70b668bda2ae4cdba410990dc62266ab1c0812fb37f33f56492"
 
       def install
         bin.install "linenoise-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.1.10/linenoise-cli_1.1.10_linux_arm64.tar.gz"
-      sha256 "d731dc3660202d4f98cd7d6f20af7c338a2d71f73f601fec38505c0402ba2bf5"
+    if Hardware::CPU.intel?
+      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.2.0/linenoise-cli_1.2.0_linux_amd64.tar.gz"
+      sha256 "6563c9230435a933d9ed5600b0e2a2ee18e5638cd1806a0f3e1b1b0a44a94393"
 
       def install
         bin.install "linenoise-cli"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.1.10/linenoise-cli_1.1.10_linux_armv6.tar.gz"
-      sha256 "bcb80c4ec4f0cd00d8274077476def64ea5f30ece75d694c2276819f30741e7b"
+      url "https://github.com/mcornick/linenoise-cli/releases/download/v1.2.0/linenoise-cli_1.2.0_linux_armv6.tar.gz"
+      sha256 "eedb580096f8b0c434017f15acb39d374cf83dc36de82079ec8fe17ec25d3bbe"
 
       def install
         bin.install "linenoise-cli"
