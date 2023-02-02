@@ -5,12 +5,12 @@
 class Mpg < Formula
   desc "Mark's Password Generator"
   homepage "https://github.com/mcornick/mpg"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
-    url "https://github.com/mcornick/mpg/releases/download/v1.0.9/mpg_1.0.9_darwin_all.tar.gz"
-    sha256 "cb5e71878fa7025af7c6d91faa59666cfefd3c318b7879711e2771e00f4d8b51"
+    url "https://github.com/mcornick/mpg/releases/download/v1.0.10/mpg_1.0.10_darwin_all.tar.gz"
+    sha256 "16d975198b253ef0e39211bdb1269746aa21241a806c0460a6f048d137adc37f"
 
     def install
       bin.install "mpg"
@@ -22,9 +22,9 @@ class Mpg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.0.9/mpg_1.0.9_linux_arm64.tar.gz"
-      sha256 "16e4c9507bb3f78d50eeee486e993b4296a21b54720f1757696528d9ae0c4303"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mcornick/mpg/releases/download/v1.0.10/mpg_1.0.10_linux_armv6.tar.gz"
+      sha256 "f0590c10cddaceb809aebc29507e083e7e48316dbc0254a1b4c6da6c84837b95"
 
       def install
         bin.install "mpg"
@@ -34,9 +34,9 @@ class Mpg < Formula
         man1.install "manpages/mpg.1"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.0.9/mpg_1.0.9_linux_armv6.tar.gz"
-      sha256 "d143aa6071f4d219887fce7a8980cb4a9a18bf34a86b182b6e0b0ff8ed08abe6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mcornick/mpg/releases/download/v1.0.10/mpg_1.0.10_linux_arm64.tar.gz"
+      sha256 "b0677b60966a1fb857c12061fdc1f22cd1a99698d45a7d1a1b56c2d9c433c2b5"
 
       def install
         bin.install "mpg"
@@ -47,8 +47,8 @@ class Mpg < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mcornick/mpg/releases/download/v1.0.9/mpg_1.0.9_linux_amd64.tar.gz"
-      sha256 "1f44d2d0a272b578d927f61c9d01afb825aa1b79fa29ecf7d18f12977b9da24c"
+      url "https://github.com/mcornick/mpg/releases/download/v1.0.10/mpg_1.0.10_linux_amd64.tar.gz"
+      sha256 "eb0f05a2a38b70ea29b37373d6643c6fc84978cd602f3f6ab9ce9f1b88fe2643"
 
       def install
         bin.install "mpg"
