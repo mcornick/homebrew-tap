@@ -5,12 +5,12 @@
 class Clilol < Formula
   desc "A CLI for omg.lol"
   homepage "https://mcornick.com/clilol"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v0.2.0/clilol_0.2.0_darwin_all.tar.gz"
-    sha256 "8c0c6917576a926fe73f0d2217786631966266e96605ee2a494c15e279be3668"
+    url "https://github.com/mcornick/clilol/releases/download/v0.2.1/clilol_0.2.1_darwin_all.tar.gz"
+    sha256 "90f0444b89c3751d28e3a91437a2604c8fb53de4f7d72ee9769fc50195a354da"
 
     def install
       bin.install "clilol"
@@ -23,8 +23,8 @@ class Clilol < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v0.2.0/clilol_0.2.0_linux_armv6.tar.gz"
-      sha256 "e451c020abc99ba8af4e6a22691c9a12562ea55493e96904b4e97e84b12ab7de"
+      url "https://github.com/mcornick/clilol/releases/download/v0.2.1/clilol_0.2.1_linux_armv6.tar.gz"
+      sha256 "b873e59430c094309bf45bcb0c8c883b60248b11b65275e739c941914d9e451c"
 
       def install
         bin.install "clilol"
@@ -35,8 +35,8 @@ class Clilol < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mcornick/clilol/releases/download/v0.2.0/clilol_0.2.0_linux_amd64.tar.gz"
-      sha256 "39f147074fd4b030cdb22016ffa762dd38b9ccfec151fbbf4e2a59917d54b1c0"
+      url "https://github.com/mcornick/clilol/releases/download/v0.2.1/clilol_0.2.1_linux_amd64.tar.gz"
+      sha256 "cdafaf6974d29ef0cbf8ca8a4786a104bbc41e0329839623652ac61c4d11de38"
 
       def install
         bin.install "clilol"
@@ -47,8 +47,8 @@ class Clilol < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v0.2.0/clilol_0.2.0_linux_arm64.tar.gz"
-      sha256 "fd9b189a2be26e66dc6739db32a0d843e09c1e82374676141557d01c4e7e7f1c"
+      url "https://github.com/mcornick/clilol/releases/download/v0.2.1/clilol_0.2.1_linux_arm64.tar.gz"
+      sha256 "c4ddb1850a2278bcbd1bc58c1afae4fcc10a819983452740d8b579ad0ea4341a"
 
       def install
         bin.install "clilol"
