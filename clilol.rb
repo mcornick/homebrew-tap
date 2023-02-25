@@ -5,12 +5,12 @@
 class Clilol < Formula
   desc "A CLI for omg.lol"
   homepage "https://mcornick.com/clilol/"
-  version "0.9.1"
+  version "0.9.2"
   license "MPL-2.0"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v0.9.1/clilol_0.9.1_darwin_all.tar.gz"
-    sha256 "938b72854c153c4eabde7ac338589ba9e2ec2da4c7d090afe23acf4daf782394"
+    url "https://github.com/mcornick/clilol/releases/download/v0.9.2/clilol_0.9.2_darwin_all.tar.gz"
+    sha256 "15eecc5d8f790e548e7c3a08bec53dc3385246657fee5844c564fd4e3f2c44bb"
 
     def install
       bin.install "clilol"
@@ -22,9 +22,9 @@ class Clilol < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v0.9.1/clilol_0.9.1_linux_armv6.tar.gz"
-      sha256 "1d854c6688730804083386296bfb77332e74721376d6c48da5b496afb1130e7a"
+    if Hardware::CPU.intel?
+      url "https://github.com/mcornick/clilol/releases/download/v0.9.2/clilol_0.9.2_linux_amd64.tar.gz"
+      sha256 "493f7c7aa31c44c3cee577657b38c64d375d389e89b81eaf2a358721d81b9226"
 
       def install
         bin.install "clilol"
@@ -34,9 +34,9 @@ class Clilol < Formula
         man1.install Dir["manpages/*.1"]
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mcornick/clilol/releases/download/v0.9.1/clilol_0.9.1_linux_amd64.tar.gz"
-      sha256 "0eeb59bd0b9c12e4092be25a6576a8620ff8f32b099d8d09f9c1a54f2625ecf6"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mcornick/clilol/releases/download/v0.9.2/clilol_0.9.2_linux_armv6.tar.gz"
+      sha256 "284529e72a179e73543234b3b504d414a34662181efc2035074de52566f7c8dc"
 
       def install
         bin.install "clilol"
@@ -47,8 +47,8 @@ class Clilol < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v0.9.1/clilol_0.9.1_linux_arm64.tar.gz"
-      sha256 "2d7d25c5d57d10ff9bd710ae31417e9d8a5c67c70cfc8c7336d097f57489a9a5"
+      url "https://github.com/mcornick/clilol/releases/download/v0.9.2/clilol_0.9.2_linux_arm64.tar.gz"
+      sha256 "e668f7d309459da873ecddffa1726e50aa4278eb6281c922397092d1925c18d9"
 
       def install
         bin.install "clilol"
