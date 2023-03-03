@@ -5,12 +5,12 @@
 class Mpg < Formula
   desc "Mark's Password Generator"
   homepage "https://github.com/mcornick/mpg"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
-    url "https://github.com/mcornick/mpg/releases/download/v1.2.1/mpg_1.2.1_darwin_all.tar.gz"
-    sha256 "0ecbc8233b6bd1b60897168528b7ebe840e9cc89788ce07126602e4336dc6826"
+    url "https://github.com/mcornick/mpg/releases/download/v1.2.2/mpg_1.2.2_darwin_all.tar.gz"
+    sha256 "a8817ad785c0a4a49d068a6298f5616c781a3579f6682d4b7937cdd6b461ef70"
 
     def install
       bin.install "mpg"
@@ -23,8 +23,8 @@ class Mpg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.1/mpg_1.2.1_linux_amd64.tar.gz"
-      sha256 "9814ebe8fb8b252d37e952a86665819c0b528f29eda3c0b9482c18c99cef52a1"
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.2/mpg_1.2.2_linux_amd64.tar.gz"
+      sha256 "e82075c952fe0692b7429408956f0da5d613dccf6b061a5fd98b13d63f25019c"
 
       def install
         bin.install "mpg"
@@ -35,8 +35,8 @@ class Mpg < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.1/mpg_1.2.1_linux_armv6.tar.gz"
-      sha256 "73a815618b75524c868d89f1e4f962e1b6cbe5582d965529f8d3432bb591a635"
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.2/mpg_1.2.2_linux_armv6.tar.gz"
+      sha256 "b471a2d989bb9671430914e3539e2c07f782e3d88ea4517e9af1340294907b3f"
 
       def install
         bin.install "mpg"
@@ -47,8 +47,8 @@ class Mpg < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.1/mpg_1.2.1_linux_arm64.tar.gz"
-      sha256 "0d488a40ced00138401936aeceeac1f01069691b110056b932b37f6f07255173"
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.2/mpg_1.2.2_linux_arm64.tar.gz"
+      sha256 "80097c1f5a2f89082b9a27c5aa259c3b6fbf99635ba02dddf78f130df59ed5e8"
 
       def install
         bin.install "mpg"
