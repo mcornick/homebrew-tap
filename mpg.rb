@@ -5,12 +5,12 @@
 class Mpg < Formula
   desc "Mark's Password Generator"
   homepage "https://github.com/mcornick/mpg"
-  version "1.2.4"
+  version "1.2.5"
   license "MIT"
 
   on_macos do
-    url "https://github.com/mcornick/mpg/releases/download/v1.2.4/mpg_1.2.4_darwin_all.tar.gz"
-    sha256 "ec1b4b3a19755f426d76a793d78a5582345bce473112485ac2f1b40dcc0922d5"
+    url "https://github.com/mcornick/mpg/releases/download/v1.2.5/mpg_1.2.5_darwin_all.tar.gz"
+    sha256 "5869a5c166d893d236737fb79ae5b77c50922f884a13babd7d435976906d738c"
 
     def install
       bin.install "mpg"
@@ -22,9 +22,21 @@ class Mpg < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.5/mpg_1.2.5_linux_armv6.tar.gz"
+      sha256 "b5e0320222de7128def83a7d556cf4407fb326b7189d7537604e42f6e7ea7708"
+
+      def install
+        bin.install "mpg"
+        bash_completion.install "completions/mpg.bash" => "mpg"
+        zsh_completion.install "completions/mpg.zsh" => "_mpg"
+        fish_completion.install "completions/mpg.fish"
+        man1.install "manpage/mpg.1"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.4/mpg_1.2.4_linux_arm64.tar.gz"
-      sha256 "8163409a3a763debef391cc9f92ad930433328263570775688a3f79f0c390e27"
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.5/mpg_1.2.5_linux_arm64.tar.gz"
+      sha256 "4a3a37e30e50bf7c2e180de510953678378773bd3c88dd74df883a465d46fe82"
 
       def install
         bin.install "mpg"
@@ -35,20 +47,8 @@ class Mpg < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.4/mpg_1.2.4_linux_amd64.tar.gz"
-      sha256 "0c50f5b956c9c7e042681d0b4688e3b8f072cab18cffcebf0978c1cfa8a7793d"
-
-      def install
-        bin.install "mpg"
-        bash_completion.install "completions/mpg.bash" => "mpg"
-        zsh_completion.install "completions/mpg.zsh" => "_mpg"
-        fish_completion.install "completions/mpg.fish"
-        man1.install "manpage/mpg.1"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/mpg/releases/download/v1.2.4/mpg_1.2.4_linux_armv6.tar.gz"
-      sha256 "8bd90b1201dd7a2d1120bc7d2804f92fedc1e605f3a16cb42b3d04e5a9fc813b"
+      url "https://github.com/mcornick/mpg/releases/download/v1.2.5/mpg_1.2.5_linux_amd64.tar.gz"
+      sha256 "6f2fee84a7060a160b45d978c6336a05bd5c0a3ee6d622203897853552a886df"
 
       def install
         bin.install "mpg"
