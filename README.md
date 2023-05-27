@@ -1,11 +1,9 @@
 # Mark's Homebrew tap
 
-This is a tap for software I have written. It is automatically
-maintained by [GoReleaser](https://goreleaser.com/).
+This is a tap for software I have written. It is automatically maintained by [GoReleaser](https://goreleaser.com/).
 
 ## Usage
 
 ```
-brew tap mcornick/tap
+brew tap mcornick/tap https://git.mcornick.dev/mcornick/homebrew-tap
 ```
-
