@@ -5,5 +5,5 @@ This is a tap for software I have written. It is automatically maintained by [Go
 ## Usage
 
 ```
-brew tap mcornick/tap https://git.mcornick.dev/mcornick/homebrew-tap
+brew tap mcornick/tap git@git.sr.ht:~mcornick/homebrew-tap
 ```
