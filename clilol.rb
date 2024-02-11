@@ -5,12 +5,12 @@
 class Clilol < Formula
   desc "A CLI for omg.lol"
   homepage "https://clilol.readthedocs.io/"
-  version "1.0.13"
+  version "1.0.14"
   license "MPL-2.0"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v1.0.13/clilol_1.0.13_darwin_all.tar.gz"
-    sha256 "fb90fc190ada47ea2d4315b486b811b705c9716028f1e3fae0bbcfc2bcbfd9a7"
+    url "https://github.com/mcornick/clilol/releases/download/v1.0.14/clilol_1.0.14_darwin_all.tar.gz"
+    sha256 "f7d6d625d8b11a9ed6a587e12628084b9a68648a5792e2eb8066147441511588"
 
     def install
       bin.install "clilol"
@@ -23,20 +23,8 @@ class Clilol < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v1.0.13/clilol_1.0.13_linux_arm64.tar.gz"
-      sha256 "7d6404768338defe8bfe06ac115ce529d76b94d5e3abb2e53d214e3742e1a097"
-
-      def install
-        bin.install "clilol"
-        bash_completion.install "completions/clilol.bash" => "clilol"
-        zsh_completion.install "completions/clilol.zsh" => "_clilol"
-        fish_completion.install "completions/clilol.fish"
-        man1.install Dir["manpages/*.1"]
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/mcornick/clilol/releases/download/v1.0.13/clilol_1.0.13_linux_amd64.tar.gz"
-      sha256 "295db4132cd867c7c9a55ad8d6e1e8dbe1510de0dad2343703826e8190f523ea"
+      url "https://github.com/mcornick/clilol/releases/download/v1.0.14/clilol_1.0.14_linux_arm64.tar.gz"
+      sha256 "5e1a71607c1ce57a09f0e07819e8b6c3aea66f06c6b344749df204222f418e48"
 
       def install
         bin.install "clilol"
@@ -47,8 +35,20 @@ class Clilol < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcornick/clilol/releases/download/v1.0.13/clilol_1.0.13_linux_armv6.tar.gz"
-      sha256 "8c2c9b348a49e35cc90f7c4868469bea49791beda7b223a1ec2157102219ed35"
+      url "https://github.com/mcornick/clilol/releases/download/v1.0.14/clilol_1.0.14_linux_armv6.tar.gz"
+      sha256 "e92642d89027446addab8fccb56601404e0b0a7c8d269f60a8dce97db2bd6e58"
+
+      def install
+        bin.install "clilol"
+        bash_completion.install "completions/clilol.bash" => "clilol"
+        zsh_completion.install "completions/clilol.zsh" => "_clilol"
+        fish_completion.install "completions/clilol.fish"
+        man1.install Dir["manpages/*.1"]
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mcornick/clilol/releases/download/v1.0.14/clilol_1.0.14_linux_amd64.tar.gz"
+      sha256 "8f4f0a5309817aba5a3e1fa727ecc26fd7260378c7c2cbdaea9d869d53f5bfff"
 
       def install
         bin.install "clilol"
