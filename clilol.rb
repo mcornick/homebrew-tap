@@ -5,12 +5,12 @@
 class Clilol < Formula
   desc "A CLI for omg.lol"
   homepage "https://clilol.readthedocs.io/"
-  version "1.0.18"
+  version "1.0.19"
   license "MPL-2.0"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v1.0.18/clilol_1.0.18_darwin_all.tar.gz"
-    sha256 "bc67b1b1065bfa36e895bc3408c7618a6f8355bce04b1f29fdc2052c4e0f5876"
+    url "https://github.com/mcornick/clilol/releases/download/v1.0.19/clilol_1.0.19_darwin_all.tar.gz"
+    sha256 "d97b8a9e2b51cf7e34b4dfa6fe347bda630666844ffef445fdaa0fe39c598e9e"
 
     def install
       bin.install "clilol"
@@ -24,8 +24,8 @@ class Clilol < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mcornick/clilol/releases/download/v1.0.18/clilol_1.0.18_linux_amd64.tar.gz"
-        sha256 "fecb4789842d88e989b66dd91cdec1ba4df562439a17e0e6512fac96cdadf6d1"
+        url "https://github.com/mcornick/clilol/releases/download/v1.0.19/clilol_1.0.19_linux_amd64.tar.gz"
+        sha256 "353c85c36bb9c728dbf4dc4fa94826306fb2f0b816a4e57a41d55ae08274f58a"
 
         def install
           bin.install "clilol"
@@ -38,8 +38,8 @@ class Clilol < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/mcornick/clilol/releases/download/v1.0.18/clilol_1.0.18_linux_armv6.tar.gz"
-        sha256 "df53ab05fcf92c025eda6112726d8983843492c0573589ebffe5820bfb52636b"
+        url "https://github.com/mcornick/clilol/releases/download/v1.0.19/clilol_1.0.19_linux_armv6.tar.gz"
+        sha256 "320240125f155edde88345aa4d47dcd7f5e8954b383b383541daf39d0b4b390c"
 
         def install
           bin.install "clilol"
@@ -52,8 +52,8 @@ class Clilol < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mcornick/clilol/releases/download/v1.0.18/clilol_1.0.18_linux_arm64.tar.gz"
-        sha256 "886b9d0cb7f93bc820d302a064794292baae139ed3b40a98039fe588e7986c2c"
+        url "https://github.com/mcornick/clilol/releases/download/v1.0.19/clilol_1.0.19_linux_arm64.tar.gz"
+        sha256 "210e1c33420f45305965415f273b8d274907fbef789b6439b0a622414482b449"
 
         def install
           bin.install "clilol"
