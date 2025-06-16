@@ -2,31 +2,31 @@
 cask "clilol" do
   desc "A CLI for omg.lol"
   homepage "https://clilol.readthedocs.io/"
-  version "1.0.28-pre3"
+  version "1.0.28-pre5"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "clilol"
-  manpage "manpages/*.1"
+  manpage "manpages/clilol.1,manpages/clilol-create.1,manpages/clilol-create-dns.1,manpages/clilol-create-paste.1,manpages/clilol-create-picture.1,manpages/clilol-create-purl.1,manpages/clilol-create-status.1,manpages/clilol-create-weblog.1,manpages/clilol-delete.1,manpages/clilol-delete-account.1,manpages/clilol-delete-account-session.1,manpages/clilol-delete-dns.1,manpages/clilol-delete-paste.1,manpages/clilol-delete-picture.1,manpages/clilol-delete-purl.1,manpages/clilol-delete-status.1,manpages/clilol-delete-weblog.1,manpages/clilol-get.1,manpages/clilol-get-account.1,manpages/clilol-get-account-info.1,manpages/clilol-get-account-name.1,manpages/clilol-get-account-settings.1,manpages/clilol-get-address.1,manpages/clilol-get-address-availability.1,manpages/clilol-get-address-expiration.1,manpages/clilol-get-address-info.1,manpages/clilol-get-dns.1,manpages/clilol-get-email.1,manpages/clilol-get-now.1,manpages/clilol-get-paste.1,manpages/clilol-get-purl.1,manpages/clilol-get-service.1,manpages/clilol-get-status.1,manpages/clilol-get-status-bio.1,manpages/clilol-get-theme.1,manpages/clilol-get-theme-preview.1,manpages/clilol-get-web.1,manpages/clilol-get-weblog.1,manpages/clilol-get-weblog-config.1,manpages/clilol-get-weblog-latest.1,manpages/clilol-get-weblog-template.1,manpages/clilol-list.1,manpages/clilol-list-account.1,manpages/clilol-list-account-addresses.1,manpages/clilol-list-account-sessions.1,manpages/clilol-list-directory.1,manpages/clilol-list-dns.1,manpages/clilol-list-now.1,manpages/clilol-list-pastes.1,manpages/clilol-list-pictures.1,manpages/clilol-list-purls.1,manpages/clilol-list-statuses.1,manpages/clilol-list-statuslog.1,manpages/clilol-list-themes.1,manpages/clilol-list-weblogs.1,manpages/clilol-update.1,manpages/clilol-update-account.1,manpages/clilol-update-account-name.1,manpages/clilol-update-account-settings.1,manpages/clilol-update-dns.1,manpages/clilol-update-email.1,manpages/clilol-update-now.1,manpages/clilol-update-preference.1,manpages/clilol-update-status.1,manpages/clilol-update-status-bio.1,manpages/clilol-update-web.1,manpages/clilol-update-weblog.1,manpages/clilol-update-weblog-config.1,manpages/clilol-update-weblog-template.1,manpages/clilol-update-web-pfp.1"
   bash_completion "completions/clilol.bash"
   zsh_completion "completions/clilol.zsh"
   fish_completion "completions/clilol.fish"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre3/clilol_1.0.28-pre3_darwin_all.tar.gz"
-    sha256 "1112116d8edb17a5e87e03f21898f3326179c4dfc30f66e9f313c6596b726cfa"
+    url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre5/clilol_1.0.28-pre5_darwin_all.tar.gz"
+    sha256 "02b267f3e5be8d0c78bb2b8b2992875eb5daf338358696a578d9f9c42cd704b4"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre3/clilol_1.0.28-pre3_linux_amd64.tar.gz"
-      sha256 "7e7bbb569c9c80f2ff4e6158435dd165faa02103a5caf9b0fcef1aa830d44df5"
+      url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre5/clilol_1.0.28-pre5_linux_amd64.tar.gz"
+      sha256 "f2bf38510d24c3a9833f11aeea0c42f1a7958d541e2d22142941bc70836ca38a"
     end
     on_arm do
-      url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre3/clilol_1.0.28-pre3_linux_arm64.tar.gz"
-      sha256 "d0a5966d59f8b06df4b58414b6c97f254f250535ac190aa9af9a05ce050e8874"
+      url "https://github.com/mcornick/clilol/releases/download/v1.0.28-pre5/clilol_1.0.28-pre5_linux_arm64.tar.gz"
+      sha256 "0997cbb32553e4ec8dc7b47bb2cce5104936cb2e69069220e510befba9c27470"
     end
   end
 
