@@ -8,6 +8,8 @@ class Clilol < Formula
   version "1.0.27"
   license "MPL-2.0"
 
+  disable! date: "2025-06-20", because: "clilol is now released as a cask", replacement_cask: "goreleaser"
+
   on_macos do
     url "https://github.com/mcornick/clilol/releases/download/v1.0.27/clilol_1.0.27_darwin_all.tar.gz"
     sha256 "1622ea1a31dca40e5019ebb3c319e632cf42db0d0331af8846489c4cf8d111e6"
