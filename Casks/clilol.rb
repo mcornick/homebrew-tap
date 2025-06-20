@@ -2,7 +2,7 @@
 cask "clilol" do
   desc "A CLI for omg.lol"
   homepage "https://clilol.readthedocs.io/"
-  version "1.1.0"
+  version "1.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,18 +15,18 @@ cask "clilol" do
   fish_completion "completions/clilol.fish"
 
   on_macos do
-    url "https://github.com/mcornick/clilol/releases/download/v1.1.0/clilol_1.1.0_darwin_all.tar.gz"
-    sha256 "a40d1d64a3b67435bde0c462af2cf6eb8cfdbbd2d7173dcaf55e615f2cde28ce"
+    url "https://github.com/mcornick/clilol/releases/download/v1.1.1/clilol_1.1.1_darwin_all.tar.gz"
+    sha256 "13abdc52715d078a06ae2898f39a1baa6e11df2f4694f114b1147b4cd9ad695e"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mcornick/clilol/releases/download/v1.1.0/clilol_1.1.0_linux_amd64.tar.gz"
-      sha256 "9110952d5fe5f4871fb5c879e0047e2f6b5a9e9ed493b659646f80f347506b65"
+      url "https://github.com/mcornick/clilol/releases/download/v1.1.1/clilol_1.1.1_linux_amd64.tar.gz"
+      sha256 "309dea76e2bba08dd890075eb4d18649ab9e4904df91c186a4605d26a671106a"
     end
     on_arm do
-      url "https://github.com/mcornick/clilol/releases/download/v1.1.0/clilol_1.1.0_linux_arm64.tar.gz"
-      sha256 "35a37f597132d91164f3e2a0bdfe006b10a592542fea7bda571f18954bbd3611"
+      url "https://github.com/mcornick/clilol/releases/download/v1.1.1/clilol_1.1.1_linux_arm64.tar.gz"
+      sha256 "145af72a601b9478da0ddd82ca330d284d94ddaf3e4dc1206e4d643ddfffbe99"
     end
   end
 
