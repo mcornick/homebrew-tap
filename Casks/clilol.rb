@@ -30,9 +30,5 @@ cask "clilol" do
     end
   end
 
-  conflicts_with formula: [
-      "clilol",
-    ]
-
   # No zap stanza required
 end
